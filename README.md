@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lista de Tarefas
+Aplicação de lista de tarefas desenvolvida com Next.js, React, TypeScript, Jest e Testing Library.
 
-## Getting Started
+O projeto permite adicionar e excluir tarefas, além de exibir a quantidade de tarefas cadastradas.
 
-First, run the development server:
+# Tecnologias utilizadas
+- Next.js
+- React
+- TypeScript
+- Jest
+- Testing Library
+- CSS Modules
+
+# Instalação
+Clone o projeto e acesse a pasta:
+
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd <NOME_DO_PROJETO>
+```
+# Instale as dependências:
+
+```bash
+npm install
+```
+
+# Executando o projeto
+Para iniciar o projeto em modo de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Após iniciar, acesse no navegador:
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Executando os testes
+Para executar todos os testes:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm test
+```
+Os testes foram desenvolvidos utilizando Jest e Testing Library.
 
-## Learn More
+# Testes realizados
+O projeto possui testes para:
 
-To learn more about Next.js, take a look at the following resources:
+- Renderização do componente NovaTarefa;
+- Validação e preenchimento do campo de nova tarefa;
+- Existência e configuração do botão de submissão;
+- Renderização do componente ItemLista;
+- Exibição do nome e ID da tarefa;
+- Renderização das tarefas na página principal;
+- Exibição da mensagem quando a lista está vazia;
+- Funcionamento do hook useContadorDeTarefas;
+- Verificação dos valores retornados pelo hook;
+- Atualização do valor do hook quando o total de tarefas é alterado.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Estrutura dos testes
+Os testes de componentes utilizam recursos da Testing Library, como:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- render()
+- screen
+- userEvent
 
-## Deploy on Vercel
+O hook useContadorDeTarefas é testado de forma isolada utilizando:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- renderHook()
+- waitFor()
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Os testes verificam principalmente a renderização correta dos elementos e os valores retornados pelo hook.
+
+# Comandos principais
+
+```bash
+npm install	: Instala as dependências do projeto
+npm run dev	: Inicia o projeto em modo de desenvolvimento
+npm test	: Executa os testes
+```
+
+# Observação
+Os dados das tarefas são mantidos em memória para fins de desenvolvimento e testes. O projeto não utiliza uma API externa ou banco de dados para armazenamento das tarefas.

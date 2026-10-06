@@ -1,0 +1,17 @@
+.list {
+    margin-left: 20px;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.item button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 15px;
+    cursor: pointer;
+}
