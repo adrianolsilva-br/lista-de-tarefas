@@ -15,8 +15,8 @@ O projeto permite adicionar e excluir tarefas, além de exibir a quantidade de t
 Clone o projeto e acesse a pasta:
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
-cd <NOME_DO_PROJETO>
+git clone https://github.com/adrianolsilva-br/lista-de-tarefas
+cd lista-de-tarefas
 ```
 # Instale as dependências:
 
